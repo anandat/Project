@@ -20,11 +20,7 @@ body {
 		<ul>
 			<li class=''><a
 				href='${pageContext.request.contextPath}/home_page.jsp'><span>Home</span></a></li>
-			<c:if test='${ empty sessionScope.userName}'>
-				<li><a href='${pageContext.request.contextPath}/login_page.jsp'><span>Login</span></a></li>
-				<li><a
-					href='${pageContext.request.contextPath}/register_page.jsp'><span>Register</span></a></li>
-			</c:if>
+			
 		</ul>
 	</div>
 	<br>

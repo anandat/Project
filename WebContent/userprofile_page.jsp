@@ -62,66 +62,97 @@ body {
 			<li class=''><a href='/Brain_Mentor/home_page.jsp'><span>Home</span></a></li>
 		</ul>
 	</div>
-	<div id="wrapper">
-
-
-		<div class="display-profile">
-			<div class="heading">
+  <div id="wrapper">
+  <div class="display-profile">
+  <centre><img src="assets/images/hq.png" ><centre>
+   <table cellspacing="10">		
+		<tr>
+			<td>
+			 	<div class="heading">
 				<label> User ID: </label>
-			</div>
-			<div class="data">
+				</div>
+			</td>
+			<td>
+				<div class="data">
 				<label><%=session.getAttribute(AppUtility.USER_ID)%> </label>
-			</div><br /><br />
-			<div class="heading">
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="heading">
 				<label> User Name: </label>
-			</div>
-			<div class="data">
+				</div>
+			</td>
+			<td>
+				<div class="data">
 				<label><%=session.getAttribute(AppUtility.USERNAME)%> </label>
-			</div><br /><br />
-			</div>
-			<div class="heading">
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="heading">
 				<label> First Name: </label>
-			</div>
-			<div class="data">
+			    </div>
+			</td>
+			<td>
+				<div class="data">
 				<label><%=session.getAttribute(AppUtility.USER_FIRSTNAME)%> </label>
-			</div><br /><br />
-			<div class="heading">
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="heading">
 				<label> Last Name: </label>
-			</div>
-			<div class="data">
+				</div>
+			</td>
+			<td>
+				<div class="data">
 				<label><%=session.getAttribute(AppUtility.USER_LASTNAME)%> </label>
-			</div><br /><br />
-			<div class="heading">
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="heading">
 				<label> Email:</label>
-			</div>
-			<div class="data">
+				</div>
+			</td>
+			<td>
+				<div class="data">
 				<label><%=session.getAttribute(AppUtility.USER_EMAIL)%> </label>
-			</div><br /><br />
-			<div class="heading">
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="heading">
 				<label>Mobile No: </label>
-			</div>
-			<div class="data">
+				</div>
+			</td>
+			<td>
+				<div class="data">
 				<label><%=session.getAttribute(AppUtility.USER_MOBILENO)%> </label>
-			</div><br /><br />
-			<div class="heading">
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="heading">
 				<label> Role Type: </label>
-			</div>
-			<div class="data">
+				</div>
+			</td>
+			<td>
+				<div class="data">
 				<label><%=session.getAttribute(AppUtility.ROLE_TYPE)%> </label>
-			</div><br /><br />
-			</div>
-			</div>
-			</div>
-			</div>
-			</div>
+				</div>
+			</td>
+		</tr>
 			
-				<div class="gradient"></div>
-
-
-
-
-
+	</table>
+</div>
+</div>
 </body>
-
-
 </html>

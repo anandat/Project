@@ -35,7 +35,7 @@ public class Register extends HttpServlet {
 		System.out.println("User Name : " + userFirstName + " " + userLastName);
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project","root","12345");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "niit@123");
 			Statement stmt = con.createStatement();
 			String sql = "SELECT * FROM users";
 			ResultSet rs = stmt.executeQuery(sql);

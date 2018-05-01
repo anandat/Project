@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1" import="demo.project.brainmentor.AppUtility"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -8,6 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/assets/css/styles.css">
+	
 <style type="text/css">
 body {
 	background:
@@ -110,10 +111,7 @@ body {
 						width="200"
 						src="${pageContext.request.contextPath}/assets/images/mongodb_logo.png" /></a></td>
 			</tr>
-
 		</table>
 	</div>
-
-
 </body>
 </html>

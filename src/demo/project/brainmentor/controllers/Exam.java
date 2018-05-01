@@ -28,8 +28,6 @@ public class Exam extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-
 		boolean finish = false;
 
 		HttpSession session = request.getSession();
@@ -37,7 +35,6 @@ public class Exam extends HttpServlet {
 			if (session.getAttribute(AppUtility.CURRENT_EXAM) == null) {
 				session = request.getSession();
 				String selectedExam = (String) request.getSession().getAttribute(AppUtility.EXAM);
-				System.out.println("Setting Exam " + selectedExam);
 				ExamCalculator newExam = new ExamCalculator(selectedExam);
 				if (newExam.questionList.size() > 0) {
 					session.setAttribute(AppUtility.CURRENT_EXAM, newExam);

@@ -1,4 +1,4 @@
-<%@ page language="java" import="demo.project.brainmentor.*"
+<%@ page language="java" import="demo.project.brainmentor.AppUtility,demo.project.brainmentor.ExamCalculator"
 	contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -45,7 +45,7 @@ body {
 			%>
 
 			<%
-				if (currentQuestion < AppUtility.NO_OF_QUESTIONS-1) {
+				if (currentQuestion < AppUtility.NO_OF_QUESTIONS - 1) {
 			%>
 			<input type="submit" name="action" value="Next" />
 			<%

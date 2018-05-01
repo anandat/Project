@@ -21,13 +21,17 @@ public class ExamCalculator {
 
 	private void getQuestions(int subjectIdbyName) {
 		try {
+			System.out.println("In get questions");
+			
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "12345");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "niit@123");
 			Statement stmt = con.createStatement();
 			String sql = "SELECT * FROM questions where subId='" + subjectIdbyName + "'";
 			ResultSet rs = stmt.executeQuery(sql);
 			QuizQuestion quizQuestion = null;
 			questionList.clear();
+			System.out.println("Result Set Size : " + rs.getFetchSize());
+			
 			while (rs.next()) {
 				quizQuestion = new QuizQuestion();
 				quizQuestion.setQuestionId(rs.getInt("questionId"));
@@ -40,12 +44,12 @@ public class ExamCalculator {
 				quizQuestion.setQuestionOption4(rs.getString("option4"));
 				questionList.add(quizQuestion);
 			}
-
+			System.out.println("Size=" + questionList.size());
 			stmt.close();
 			rs.close();
 			con.close();
 		} catch (Exception e) {
-			System.out.println("Execption" + e.getMessage());
+			System.out.println("Exception" + e.getMessage());
 			e.printStackTrace();
 		}
 	}
