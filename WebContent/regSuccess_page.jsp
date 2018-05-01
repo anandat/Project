@@ -28,7 +28,7 @@ body {
 </div>
 
 <div style="position:absolute;left:350px;top:200px">
-<h3>Congratulation ${requestScope.newUser} your account created successfully , <a href="${pageContext.request.contextPath}/login_page.jsp">login </a>to take the exam.</h3>
+<h3>Congratulations ${requestScope.newUser} your account created successfully , <a href="${pageContext.request.contextPath}/login_page.jsp">login </a>to take the exam.</h3>
 </div>
 
 

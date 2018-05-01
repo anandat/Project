@@ -21,7 +21,7 @@ public class AppUtility {
 	public static final String ANSWER = "answer";
 	public static final String RESULT = "result";
 	public static final int NO_OF_QUESTIONS = 10;
-	
+
 	public static String getRoleType(int i) {
 		switch (i) {
 		case 1:
@@ -32,15 +32,22 @@ public class AppUtility {
 			return "STUDENT";
 		}
 	}
+
 	public static int getSubjectIdbyName(String name) {
 		switch (name.trim().toUpperCase()) {
 		case "C++":
 			return 1;
 		case "JAVA":
 			return 2;
+		case "PYTHON":
+			return 3;
+		case "JS":
+			return 4;
+		case "SQL":
+			return 5;
 		default:
 			return 1;
 		}
 	}
-	
+
 }
