@@ -118,8 +118,11 @@ CREATE TABLE IF NOT EXISTS `test` (
   `subId` int(10) NOT NULL,
   `marksScored` int(10) NOT NULL,
   `totalMarks` int(10) NOT NULL DEFAULT 100,
+  `userId` int(11) NOT NULL DEFAULT 1,
   PRIMARY KEY (`testId`),
   KEY `contraint_fk_16` (`subId`),
+  KEY `FK89` (`userId`),
+  CONSTRAINT `FK89` FOREIGN KEY (`userId`) REFERENCES `users` (`userId`),
   CONSTRAINT `contraint_fk_16` FOREIGN KEY (`subId`) REFERENCES `subjects` (`subId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -142,7 +145,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   CONSTRAINT `contraint_fk_4` FOREIGN KEY (`roleId`) REFERENCES `roles` (`roleId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
 
--- Dumping data for table project.users: ~8 rows (approximately)
+-- Dumping data for table project.users: ~7 rows (approximately)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` (`userId`, `roleId`, `userName`, `password`, `userEmail`, `userMobileNo`, `firstName`, `lastName`) VALUES
 	(1, 1, 'A M', '12345678', 'a@gmail.com', 8802467991, 'Animesh', 'Mangla'),
@@ -154,22 +157,6 @@ INSERT INTO `users` (`userId`, `roleId`, `userName`, `password`, `userEmail`, `u
 	(19, 1, '23ed3d3', '1234567', 'sa@gmail.com', 2442343253, 'swdxwd', 'ewdwdw'),
 	(20, 1, 'at', '1234567', 'at@at.com', 0, 'Akhi', 'at');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
-
--- Dumping structure for table project.usertestmapping
-CREATE TABLE IF NOT EXISTS `usertestmapping` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `userId` int(11) NOT NULL DEFAULT 1,
-  `testId` int(11) NOT NULL DEFAULT 1,
-  PRIMARY KEY (`id`),
-  KEY `FK4` (`userId`),
-  KEY `FK5` (`testId`),
-  CONSTRAINT `FK4` FOREIGN KEY (`userId`) REFERENCES `users` (`userId`),
-  CONSTRAINT `FK5` FOREIGN KEY (`testId`) REFERENCES `test` (`testId`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- Dumping data for table project.usertestmapping: ~0 rows (approximately)
-/*!40000 ALTER TABLE `usertestmapping` DISABLE KEYS */;
-/*!40000 ALTER TABLE `usertestmapping` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
